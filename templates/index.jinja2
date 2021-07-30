@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to Tutorial Flask</title>
+</head>
+<body>
+    <center><h1>This is my almighty homepage</h1></center>
+    <!-- Html normal comment -->
+    {#  This is a jinja comment   #}
+    {{ name }}
+    <b>My profile details are: {{ profile }}</b>
+    <p>This is something: {{ hello }}</p>
+    <p>My name is {{ profile['fullname'] }}</p>
+    <p>My name is {{ profile.fullname }}</p>
+
+    {% for foo in numb %}
+        {% if loop.first %}
+            <p>{{ loop.index }}. This is my first and highest lucky number: {{ foo }}</p>
+        {% elif loop.index == 8 %}
+            <p>{{ foo }} is a bit late to class today!</p>
+        {% else %}
+            <p>{{ loop.index0 }}. My lucky number is: {{ foo }}</p>
+        {% endif %}
+    {% endfor %}
+
+
+</body>
+</html>
